@@ -1,0 +1,16 @@
+{% import "macros.html" as ui with context %}
+<section
+  class="page-panel page-panel--new"
+  data-section="new"
+  data-page-title-en="{{ translations['new.title']['en'] }}"
+  data-page-title-scn="{{ translations['new.title']['scn'] }}"
+  data-page-title-it="{{ translations['new.title']['it'] }}"
+>
+  <div class="page-heading">
+    <div>
+      {{ ui.text("new.title", "h1") }}
+    </div>
+    {{ ui.text("new.intro", "p", "page-intro") }}
+  </div>
+  {% include "fragments/submission_form.html" %}
+</section>

@@ -1,0 +1,39 @@
+{% import "macros.html" as ui with context %}
+<section
+  class="page-panel page-panel--history"
+  data-section="history"
+  data-page-title-en="{{ translations['history.title']['en'] }}"
+  data-page-title-scn="{{ translations['history.title']['scn'] }}"
+  data-page-title-it="{{ translations['history.title']['it'] }}"
+>
+  <div class="page-heading">
+    <div>
+      {{ ui.text("history.title", "h1") }}
+    </div>
+    {{ ui.text("history.intro", "p", "page-intro") }}
+  </div>
+
+  {% if submissions %}
+    <div class="submission-list" role="table" {{ ui.translated_attribute("aria.submission_history") }}>
+      <div class="submission-row submission-row--header" role="row">
+        {{ ui.text("history.title_col", "span") }}
+        {{ ui.text("history.file_col", "span") }}
+        {{ ui.text("history.date_col", "span") }}
+      </div>
+      {% for submission in submissions %}
+        <article class="submission-row" role="row">
+          <strong role="cell">{{ submission.title }}</strong>
+          <span class="filename" role="cell">{{ submission.original_filename }}</span>
+          <time role="cell" datetime="{{ submission.created_at.isoformat() }}" data-local-date>
+            {{ submission.created_at.strftime('%d %b %Y') }}
+          </time>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <span class="empty-state__symbol" aria-hidden="true">◎</span>
+      {{ ui.text("history.empty", "p") }}
+    </div>
+  {% endif %}
+</section>

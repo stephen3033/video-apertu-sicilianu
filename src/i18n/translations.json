@@ -1,0 +1,502 @@
+{
+  "brand.tagline": {
+    "en": "Sicilian media uploads",
+    "scn": "Carricamenti di media siciliani",
+    "it": "Caricamenti di contenuti siciliani"
+  },
+  "language.label": {
+    "en": "Language",
+    "scn": "Lingua",
+    "it": "Lingua"
+  },
+  "aria.highlights": {
+    "en": "Highlights",
+    "scn": "Punti principali",
+    "it": "Punti principali"
+  },
+  "aria.account_access": {
+    "en": "Account access",
+    "scn": "Accessu ô cuntu",
+    "it": "Accesso all'account"
+  },
+  "aria.account_action": {
+    "en": "Account action",
+    "scn": "Azzioni dû cuntu",
+    "it": "Azione account"
+  },
+  "aria.primary_navigation": {
+    "en": "Primary navigation",
+    "scn": "Navigazzioni principali",
+    "it": "Navigazione principale"
+  },
+  "aria.submission_history": {
+    "en": "Previous submissions",
+    "scn": "Mannati pricidenti",
+    "it": "Invii precedenti"
+  },
+  "home.eyebrow": {
+    "en": "A living archive",
+    "scn": "N'archiviu vivu",
+    "it": "Un archivio vivo"
+  },
+  "home.title": {
+    "en": "Preserve Sicily in its own voices.",
+    "scn": "Cunservamu la Sicilia ntê so vuci.",
+    "it": "Conserviamo la Sicilia attraverso le sue voci."
+  },
+  "home.intro": {
+    "en": "Contribute interviews, oral histories, performances, and everyday recordings to a shared cultural collection.",
+    "scn": "Manna ntirvisti, storî urali, spittàculi e riggistrazzioni d'ogni jornu a na ricota culturali cumuni.",
+    "it": "Contribuisci con interviste, storie orali, esibizioni e registrazioni quotidiane a una raccolta culturale condivisa."
+  },
+  "home.audio": {
+    "en": "Audio and video welcome",
+    "scn": "Audio e vìdiu accittati",
+    "it": "Audio e video accettati"
+  },
+  "home.private": {
+    "en": "Your submissions stay tied to your account.",
+    "scn": "Li to mannati arrèstanu lijati ô to cuntu.",
+    "it": "I tuoi invii restano collegati al tuo account."
+  },
+  "auth.title": {
+    "en": "Sign in or create account",
+    "scn": "Trasi o crìa un cuntu",
+    "it": "Accedi o crea un account"
+  },
+  "auth.intro": {
+    "en": "Enter your email and we will send you a six-digit code.",
+    "scn": "Scrivi la to email e ti mannaremu un còdici di sei nùmmari.",
+    "it": "Inserisci la tua email e ti invieremo un codice di sei cifre."
+  },
+  "auth.email": {
+    "en": "Email address",
+    "scn": "Nnirizzu email",
+    "it": "Indirizzo email"
+  },
+  "auth.email.action": {
+    "en": "Email me a code",
+    "scn": "Mànnami un còdici",
+    "it": "Inviami un codice"
+  },
+  "auth.code.title": {
+    "en": "Check your email",
+    "scn": "Cuntrolla la to email",
+    "it": "Controlla la tua email"
+  },
+  "auth.code.sent": {
+    "en": "We sent a six-digit code to",
+    "scn": "Mannamu un còdici di sei nùmmari a",
+    "it": "Abbiamo inviato un codice di sei cifre a"
+  },
+  "auth.code": {
+    "en": "Six-digit code",
+    "scn": "Còdici di sei nùmmari",
+    "it": "Codice di sei cifre"
+  },
+  "auth.code.help": {
+    "en": "The code expires in 10 minutes and can be used once.",
+    "scn": "Lu còdici scadi tra 10 minuti e si po usari na vota sula.",
+    "it": "Il codice scade tra 10 minuti e può essere usato una sola volta."
+  },
+  "auth.verify.action": {
+    "en": "Continue",
+    "scn": "Cuntinua",
+    "it": "Continua"
+  },
+  "auth.resend": {
+    "en": "Send a new code",
+    "scn": "Manna un còdici novu",
+    "it": "Invia un nuovo codice"
+  },
+  "auth.change_email": {
+    "en": "Change email",
+    "scn": "Cancia email",
+    "it": "Cambia email"
+  },
+  "auth.code.resent": {
+    "en": "A new code is on its way.",
+    "scn": "Un còdici novu sta arrivannu.",
+    "it": "Un nuovo codice è in arrivo."
+  },
+  "nav.history": {
+    "en": "Previous submissions",
+    "scn": "Mannati pricidenti",
+    "it": "Invii precedenti"
+  },
+  "nav.new": {
+    "en": "New submission",
+    "scn": "Novu mannatu",
+    "it": "Nuovo invio"
+  },
+  "nav.account": {
+    "en": "Signed in as",
+    "scn": "Trasutu comu",
+    "it": "Accesso come"
+  },
+  "nav.logout": {
+    "en": "Sign out",
+    "scn": "Nesci",
+    "it": "Esci"
+  },
+  "new.eyebrow": {
+    "en": "Contribute",
+    "scn": "Cuntribbuisci",
+    "it": "Contribuisci"
+  },
+  "new.title": {
+    "en": "Upload a file",
+    "scn": "Càrrica un file",
+    "it": "Carica un file"
+  },
+  "new.intro": {
+    "en": "Select one audio or video file and add its details.",
+    "scn": "Scigghi un file audio o vìdiu e junci li dittagghi.",
+    "it": "Seleziona un file audio o video e aggiungi i dettagli."
+  },
+  "form.title": {
+    "en": "Title",
+    "scn": "Tìtulu",
+    "it": "Titolo"
+  },
+  "form.title.help": {
+    "en": "Give the recording a short, descriptive name.",
+    "scn": "Duna â riggistrazzioni un nomu curtu e chiaru.",
+    "it": "Dai alla registrazione un nome breve e descrittivo."
+  },
+  "form.notes": {
+    "en": "Notes",
+    "scn": "Noti",
+    "it": "Note"
+  },
+  "form.optional": {
+    "en": "optional",
+    "scn": "facultativu",
+    "it": "facoltativo"
+  },
+  "form.notes.help": {
+    "en": "Add context such as place, speakers, date, or subject.",
+    "scn": "Junci cuntestu comu locu, parraturi, data o argumentu.",
+    "it": "Aggiungi informazioni come luogo, persone, data o argomento."
+  },
+  "form.file": {
+    "en": "Audio or video file",
+    "scn": "File audio o vìdiu",
+    "it": "File audio o video"
+  },
+  "form.drop": {
+    "en": "Drop a file here or choose from your device",
+    "scn": "Lassa ccà un file o pigghialu dû to dispusitivu",
+    "it": "Trascina qui un file o sceglilo dal dispositivo"
+  },
+  "form.selected": {
+    "en": "Selected file",
+    "scn": "File scigghiutu",
+    "it": "File selezionato"
+  },
+  "form.formats": {
+    "en": "MP4, MOV, WebM, MKV, AVI, MP3, WAV, M4A, AAC, FLAC, OGG, or Opus.",
+    "scn": "MP4, MOV, WebM, MKV, AVI, MP3, WAV, M4A, AAC, FLAC, OGG o Opus.",
+    "it": "MP4, MOV, WebM, MKV, AVI, MP3, WAV, M4A, AAC, FLAC, OGG oppure Opus."
+  },
+  "form.limit": {
+    "en": "Maximum file size",
+    "scn": "Grannizza màssima",
+    "it": "Dimensione massima"
+  },
+  "form.submit": {
+    "en": "Submit recording",
+    "scn": "Manna la riggistrazzioni",
+    "it": "Invia registrazione"
+  },
+  "form.uploading": {
+    "en": "Uploading…",
+    "scn": "Carricamentu…",
+    "it": "Caricamento…"
+  },
+  "form.progress": {
+    "en": "Upload progress",
+    "scn": "Prugressu dû carricamentu",
+    "it": "Avanzamento del caricamento"
+  },
+  "success.eyebrow": {
+    "en": "Submission received",
+    "scn": "Mannatu arricivutu",
+    "it": "Invio ricevuto"
+  },
+  "success.title": {
+    "en": "Upload complete",
+    "scn": "Carricamentu cumpletu",
+    "it": "Caricamento completato"
+  },
+  "success.message": {
+    "en": "Your file was uploaded successfully.",
+    "scn": "Lu file fu carricatu currettamenti.",
+    "it": "Il file è stato caricato correttamente."
+  },
+  "success.title_label": {
+    "en": "Title",
+    "scn": "Tìtulu",
+    "it": "Titolo"
+  },
+  "success.file_label": {
+    "en": "File",
+    "scn": "File",
+    "it": "File"
+  },
+  "success.another": {
+    "en": "Submit another file",
+    "scn": "Manna n'àutru file",
+    "it": "Invia un altro file"
+  },
+  "history.eyebrow": {
+    "en": "Your archive",
+    "scn": "Lu to archiviu",
+    "it": "Il tuo archivio"
+  },
+  "history.title": {
+    "en": "Previous submissions",
+    "scn": "Mannati pricidenti",
+    "it": "Invii precedenti"
+  },
+  "history.intro": {
+    "en": "Files you have uploaded.",
+    "scn": "Li file ca carricasti.",
+    "it": "I file che hai caricato."
+  },
+  "history.empty": {
+    "en": "You have not submitted a recording yet. Use New submission in the navigation when you are ready.",
+    "scn": "Nun mannasti ancora nudda riggistrazzioni. Quannu sì prontu, aḍḍòpira Novu mannatu ntâ barra.",
+    "it": "Non hai ancora inviato registrazioni. Quando vuoi, usa Nuovo invio nella navigazione."
+  },
+  "history.title_col": {
+    "en": "Title",
+    "scn": "Tìtulu",
+    "it": "Titolo"
+  },
+  "history.file_col": {
+    "en": "Original file",
+    "scn": "File urigginali",
+    "it": "File originale"
+  },
+  "history.date_col": {
+    "en": "Submitted",
+    "scn": "Mannatu",
+    "it": "Inviato"
+  },
+  "error.summary": {
+    "en": "Please check the following:",
+    "scn": "Cuntrolla sti cosi:",
+    "it": "Controlla quanto segue:"
+  },
+  "error.email": {
+    "en": "Enter a valid email address.",
+    "scn": "Scrivi un nnirizzu email vàlidiu.",
+    "it": "Inserisci un indirizzo email valido."
+  },
+  "error.code_invalid": {
+    "en": "Enter the valid six-digit code.",
+    "scn": "Scrivi lu còdici vàlidiu di sei nùmmari.",
+    "it": "Inserisci il codice valido di sei cifre."
+  },
+  "error.code_expired": {
+    "en": "This code has expired. Request a new one.",
+    "scn": "Stu còdici scadìu. Addumànnani unu novu.",
+    "it": "Questo codice è scaduto. Richiedine uno nuovo."
+  },
+  "error.code_attempts": {
+    "en": "Too many incorrect attempts. Request a new code later.",
+    "scn": "Troppi tintativi sbagghiati. Addumanna un còdici novu cchiù tardu.",
+    "it": "Troppi tentativi errati. Richiedi un nuovo codice più tardi."
+  },
+  "error.rate_limit": {
+    "en": "Please wait before requesting another code.",
+    "scn": "Aspetta prima d'addumannari n'àutru còdici.",
+    "it": "Attendi prima di richiedere un altro codice."
+  },
+  "error.email_send": {
+    "en": "We could not send the code. Please try again.",
+    "scn": "Nun pûtemu mannari lu còdici. Prova arrè.",
+    "it": "Non è stato possibile inviare il codice. Riprova."
+  },
+  "error.csrf": {
+    "en": "Your form expired. Refresh the page and try again.",
+    "scn": "Lu mòdulu scadìu. Attualizza la pàggina e prova arrè.",
+    "it": "Il modulo è scaduto. Aggiorna la pagina e riprova."
+  },
+  "error.title_required": {
+    "en": "Add a title for the recording.",
+    "scn": "Junci un tìtulu â riggistrazzioni.",
+    "it": "Aggiungi un titolo alla registrazione."
+  },
+  "error.title_long": {
+    "en": "The title must be 160 characters or fewer.",
+    "scn": "Lu tìtulu havi a èssiri di 160 caràttari o menu.",
+    "it": "Il titolo deve contenere al massimo 160 caratteri."
+  },
+  "error.notes_long": {
+    "en": "Notes must be 2,000 characters or fewer.",
+    "scn": "Li noti hannu a èssiri di 2.000 caràttari o menu.",
+    "it": "Le note devono contenere al massimo 2.000 caratteri."
+  },
+  "error.file_required": {
+    "en": "Choose an audio or video file.",
+    "scn": "Scigghi un file audio o vìdiu.",
+    "it": "Scegli un file audio o video."
+  },
+  "error.file_type": {
+    "en": "This file format is not supported.",
+    "scn": "Stu tipu di file nun è suppurtatu.",
+    "it": "Questo formato di file non è supportato."
+  },
+  "error.file_size": {
+    "en": "The file is larger than the allowed limit.",
+    "scn": "Lu file è cchiù granni dû lìmiti pirmisu.",
+    "it": "Il file supera il limite consentito."
+  },
+  "error.file_empty": {
+    "en": "The selected file is empty.",
+    "scn": "Lu file scigghiutu è vacanti.",
+    "it": "Il file selezionato è vuoto."
+  },
+  "error.repository": {
+    "en": "We could not store the file. Please try again.",
+    "scn": "Nun pûtemu sarvari lu file. Prova arrè.",
+    "it": "Non è stato possibile salvare il file. Riprova."
+  },
+  "nav.review": {
+    "en": "Review",
+    "scn": "Rivisioni",
+    "it": "Revisione"
+  },
+  "error.capacity": {
+    "en": "Staging storage is full. Please try again after recordings have been reviewed.",
+    "scn": "Lu spazziu è chinu. Prova arrè doppu la rivisioni dî riggistrazzioni.",
+    "it": "Lo spazio è pieno. Riprova dopo la revisione delle registrazioni."
+  },
+  "error.upload": {
+    "en": "The upload could not be completed. Please try again.",
+    "scn": "Nun si potti cumplitari lu carricamentu. Prova arrè.",
+    "it": "Non è stato possibile completare il caricamento. Riprova."
+  },
+  "review.empty": {
+    "en": "No recordings to review.",
+    "scn": "Nudda riggistrazzioni di rividiri.",
+    "it": "Nessuna registrazione da revisionare."
+  },
+  "review.accept": {
+    "en": "Accept",
+    "scn": "Accetta",
+    "it": "Accetta"
+  },
+  "review.reject": {
+    "en": "Reject",
+    "scn": "Rifiuta",
+    "it": "Rifiuta"
+  },
+  "review.retry": {
+    "en": "Retry",
+    "scn": "Prova arrè",
+    "it": "Riprova"
+  },
+  "review.download": {
+    "en": "Download",
+    "scn": "Scàrrica",
+    "it": "Scarica"
+  },
+  "review.capacity": {
+    "en": "Staging storage",
+    "scn": "Spazziu timpuràniu",
+    "it": "Spazio temporaneo"
+  },
+  "review.contributor": {
+    "en": "Contributor",
+    "scn": "Cuntribbuturi",
+    "it": "Autore"
+  },
+  "review.status": {
+    "en": "Status",
+    "scn": "Statu",
+    "it": "Stato"
+  },
+  "review.bytes": {
+    "en": "Bytes",
+    "scn": "Byte",
+    "it": "Byte"
+  },
+  "review.pending": {
+    "en": "Pending review",
+    "scn": "Aspetta rivisioni",
+    "it": "In attesa di revisione"
+  },
+  "review.approved": {
+    "en": "Accepted",
+    "scn": "Accittatu",
+    "it": "Accettato"
+  },
+  "review.transferring": {
+    "en": "Transferring",
+    "scn": "Trasfirimentu",
+    "it": "Trasferimento"
+  },
+  "review.upstream_accepted": {
+    "en": "Archive accepted",
+    "scn": "Accittatu di Archive",
+    "it": "Accettato da Archive"
+  },
+  "review.cleanup_pending": {
+    "en": "Cleanup pending",
+    "scn": "Aspetta pulizia",
+    "it": "Pulizia in attesa"
+  },
+  "review.published": {
+    "en": "Published",
+    "scn": "Pubblicatu",
+    "it": "Pubblicato"
+  },
+  "review.rejected": {
+    "en": "Rejected",
+    "scn": "Rifiutatu",
+    "it": "Rifiutato"
+  },
+  "review.failed": {
+    "en": "Transfer failed",
+    "scn": "Trasfirimentu fallutu",
+    "it": "Trasferimento fallito"
+  },
+  "review.legacy": {
+    "en": "Imported",
+    "scn": "Mpurtatu",
+    "it": "Importato"
+  },
+  "review.backlog": {
+    "en": "Cleanup backlog",
+    "scn": "Pulizii di fari",
+    "it": "Pulizie in attesa"
+  },
+  "review.oldest_pending": {
+    "en": "Oldest pending recording",
+    "scn": "Riggistrazzioni cchiù vecchia",
+    "it": "Registrazione in attesa più vecchia"
+  },
+  "review.oldest_job": {
+    "en": "Oldest transfer job",
+    "scn": "Trasfirimentu cchiù vecchiu",
+    "it": "Trasferimento più vecchio"
+  },
+  "review.decision": {
+    "en": "Review decision",
+    "scn": "Dicisioni di rivisioni",
+    "it": "Decisione di revisione"
+  },
+  "error.reviewer": {
+    "en": "Reviewer access is required. Reload the page to update your access.",
+    "scn": "Ci voli l’accessu di revisuri. Ricàrrica la pàggina.",
+    "it": "È necessario l’accesso da revisore. Ricarica la pagina."
+  },
+  "error.review_conflict": {
+    "en": "A review decision has already been recorded. Reload the review list.",
+    "scn": "La dicisioni fu già riggistrata. Ricàrrica la lista.",
+    "it": "Una decisione è già stata registrata. Ricarica l’elenco."
+  }
+}

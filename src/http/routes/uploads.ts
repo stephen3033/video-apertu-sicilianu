@@ -1,0 +1,10 @@
+import { Hono } from 'hono';
+import { type App } from '../../runtime/context';
+import { csrf, requireUser } from '../middleware/guards';
+import { authorizeUpload, authorizeParts, completeUpload, cancelUpload } from '../../services/uploads';
+export const uploads = new Hono<App>();
+uploads.use('*', requireUser, csrf);
+uploads.post('/authorize', authorizeUpload);
+uploads.post('/:id/parts', authorizeParts);
+uploads.post('/:id/complete', completeUpload);
+uploads.post('/:id/cancel', cancelUpload);

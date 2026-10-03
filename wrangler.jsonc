@@ -1,0 +1,67 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "video-apertu-sicilianu",
+  "main": "src/entrypoints/worker.ts",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist/public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "video-apertu-sicilianu",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations/d1"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "STAGING_BUCKET",
+      "bucket_name": "video-apertu-sicilianu-staging"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "*/5 * * * *"
+    ]
+  },
+  "vars": {
+    "APP_ENV": "local",
+    "APP_ORIGIN": "http://localhost:8787",
+    "EMAIL_BACKEND": "console",
+    "EMAIL_FROM": "noreply@example.com",
+    "R2_BUCKET_NAME": "video-apertu-sicilianu-staging",
+    "IA_ITEM_PREFIX": "video-apertu-sicilianu",
+    "LOCAL_UPLOAD_ORIGIN": "http://localhost:8788",
+    "DEAD_LETTER_QUEUE": "vas-local-dead-letter"
+  },
+  "queues": {
+    "producers": [
+      {
+        "binding": "PUBLICATION_QUEUE",
+        "queue": "vas-local-publication"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "vas-local-publication",
+        "max_batch_size": 1,
+        "max_batch_timeout": 1,
+        "max_retries": 8,
+        "max_concurrency": 2,
+        "dead_letter_queue": "vas-local-dead-letter"
+      },
+      {
+        "queue": "vas-local-dead-letter",
+        "max_batch_size": 1,
+        "max_batch_timeout": 1,
+        "max_concurrency": 1
+      }
+    ]
+  }
+}

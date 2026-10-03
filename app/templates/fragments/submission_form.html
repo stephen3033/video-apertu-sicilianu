@@ -1,0 +1,79 @@
+{% import "macros.html" as ui with context %}
+<div id="submission-workspace" class="submission-workspace">
+  {{ ui.errors(errors) }}
+  <form
+    class="submission-form"
+    method="post"
+    enctype="multipart/form-data"
+    action="{{ url_for('create_submission') }}"
+    hx-post="{{ url_for('create_submission') }}"
+    hx-encoding="multipart/form-data"
+    hx-target="#submission-workspace"
+    hx-swap="outerHTML"
+    hx-disabled-elt="find button"
+    data-upload-form
+  >
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="form-columns">
+      <div class="form-details">
+        <label class="field">
+          {{ ui.text("form.title") }}
+          <input name="title" type="text" value="{{ form_title }}" required maxlength="160" aria-describedby="title-help">
+          {{ ui.text("form.title.help", "small", "field-help") }}
+        </label>
+        <label class="field">
+          <span>{{ ui.text("form.notes") }} <em>— {{ ui.text("form.optional") }}</em></span>
+          <textarea name="notes" rows="6" maxlength="2000" aria-describedby="notes-help">{{ form_notes }}</textarea>
+          {{ ui.text("form.notes.help", "small", "field-help") }}
+        </label>
+      </div>
+
+      <div class="file-column">
+        <span class="field-label">{{ ui.text("form.file") }}</span>
+        <label class="dropzone" data-dropzone>
+          <input
+            class="sr-only"
+            name="media"
+            type="file"
+            accept="{{ accept_extensions }}"
+            required
+            data-file-input
+            data-max-bytes="{{ max_upload_bytes }}"
+            data-size-error-en="{{ translations['error.file_size']['en'] }}"
+            data-size-error-scn="{{ translations['error.file_size']['scn'] }}"
+            data-size-error-it="{{ translations['error.file_size']['it'] }}"
+          >
+          <span class="dropzone__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 33V12m0 0-8 8m8-8 8 8M9 31v5a4 4 0 0 0 4 4h22a4 4 0 0 0 4-4v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          {{ ui.text("form.drop", "strong") }}
+          <span class="selected-file" data-selected-file hidden>
+            {{ ui.text("form.selected") }}: <b data-filename></b>
+          </span>
+        </label>
+        <div class="file-rules">
+          {{ ui.text("form.formats", "span") }}
+          <span>{{ ui.text("form.limit") }}: {{ upload_limit_label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="upload-status" data-upload-status hidden aria-live="polite">
+      <div class="upload-status__label">
+        {{ ui.text("form.uploading") }}
+        <span data-progress-value>0%</span>
+      </div>
+      <progress max="100" value="0">
+        {{ ui.text("form.progress") }}
+      </progress>
+    </div>
+
+    <div class="form-actions">
+      <button class="button button--primary" type="submit">
+        {{ ui.text("form.submit") }}
+        <span aria-hidden="true">↑</span>
+      </button>
+    </div>
+  </form>
+</div>
+

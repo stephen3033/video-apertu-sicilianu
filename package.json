@@ -1,0 +1,56 @@
+{
+  "name": "video-apertu-sicilianu",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/local/start.mjs",
+    "typecheck": "npm run build && tsc --noEmit && tsc -p tsconfig.client.json && tsc -p tsconfig.browser-tests.json",
+    "test": "npm run build && vitest run",
+    "db:migrate": "node scripts/local/migrate.mjs",
+    "deploy:config": "node scripts/deployment-config.mjs",
+    "deploy": "node scripts/deploy.mjs production",
+    "deploy:dry-run": "npm run build && node scripts/wrangler-local.mjs deploy --dry-run --outdir dist/worker",
+    "db:migrate:remote": "node scripts/remote-migrate.mjs",
+    "test:browser": "npm run test:e2e",
+    "deploy:preview": "node scripts/deploy.mjs preview",
+    "deploy:production": "node scripts/deploy.mjs production",
+    "secrets:sync": "node scripts/secrets.mjs",
+    "migration:export": "python3 scripts/export-legacy.py",
+    "config:test": "node --test scripts/config.test.mjs",
+    "test:migration": "node --test scripts/migration.test.mjs",
+    "format": "prettier --write \"src/**/*.ts\" \"scripts/**/*.mjs\" \"worker-tests/**/*.ts\" \"browser-tests/**/*.ts\" \"*.config.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/**/*.mjs\" \"worker-tests/**/*.ts\" \"browser-tests/**/*.ts\" \"*.config.ts\"",
+    "local": "node scripts/local/control.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:local": "node --test scripts/local/runtime.test.mjs",
+    "verify": "npm run format:check && npm run typecheck && npm test && npm run config:test && npm run test:migration && npm run test:local && npm run test:e2e && npm run deploy:dry-run"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1136.0",
+    "@aws-sdk/s3-request-presigner": "3.1136.0",
+    "hono": "4.13.8",
+    "htmx.org": "2.0.7",
+    "validator": "13.15.35"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "0.22.0",
+    "@cloudflare/workers-types": "5.20260921.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.2",
+    "@types/validator": "13.15.10",
+    "esbuild": "0.28.1",
+    "miniflare": "5.20260815.0-alpha",
+    "prettier": "3.9.8",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11",
+    "wrangler": "4.135.0"
+  },
+  "overrides": {
+    "sharp": "0.35.4"
+  }
+}

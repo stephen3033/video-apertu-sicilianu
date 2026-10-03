@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+
+{% block body %}
+<div class="public-shell">
+  <header class="public-header">
+    <a class="brand" href="{{ url_for('home') }}" aria-label="Video Apertu Sicilianu">
+      {{ ui.mark() }}
+      <span class="brand__words">
+        <strong>Video Apertu</strong>
+        <small>Sicilianu</small>
+      </span>
+    </a>
+    {{ ui.language_selector("public") }}
+  </header>
+
+  <main class="auth-page">
+    {% include auth_template %}
+  </main>
+</div>
+{% endblock %}

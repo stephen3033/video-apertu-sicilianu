@@ -1,0 +1,25 @@
+{% import "macros.html" as ui with context %}
+<section class="auth-panel" id="auth-panel" {{ ui.translated_attribute("aria.account_access") }}>
+  {{ ui.text("auth.title", "h1") }}
+  {{ ui.text("auth.intro", "p", "card-intro") }}
+  {{ ui.errors(auth_errors) }}
+  <form
+    method="post"
+    action="{{ url_for('request_login_code') }}"
+    hx-post="{{ url_for('request_login_code') }}"
+    hx-target="#auth-panel"
+    hx-swap="outerHTML"
+    hx-disabled-elt="find button"
+  >
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="locale" value="{{ auth_locale|default('en') }}" data-auth-locale>
+    <label class="field">
+      {{ ui.text("auth.email") }}
+      <input name="email" type="email" value="{{ auth_email|default('') }}" autocomplete="email" required maxlength="320" autofocus>
+    </label>
+    <button class="button button--primary button--wide" type="submit">
+      {{ ui.text("auth.email.action") }}
+      <span aria-hidden="true">→</span>
+    </button>
+  </form>
+</section>

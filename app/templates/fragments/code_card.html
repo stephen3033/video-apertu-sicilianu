@@ -1,0 +1,54 @@
+{% import "macros.html" as ui with context %}
+<section class="auth-panel" id="auth-panel" {{ ui.translated_attribute("aria.account_access") }}>
+  {{ ui.text("auth.code.title", "h1") }}
+  <p class="card-intro">
+    {{ ui.text("auth.code.sent") }}
+    <strong class="masked-email">{{ masked_email }}</strong>
+  </p>
+  {% if auth_notice %}
+    <p class="form-notice" role="status">{{ ui.text(auth_notice) }}</p>
+  {% endif %}
+  {{ ui.errors(auth_errors) }}
+  <form
+    method="post"
+    action="{{ url_for('verify_login_code') }}"
+    hx-post="{{ url_for('verify_login_code') }}"
+    hx-target="#auth-panel"
+    hx-swap="outerHTML"
+    hx-disabled-elt="find button"
+  >
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="challenge_id" value="{{ challenge_id }}">
+    <input type="hidden" name="locale" value="{{ auth_locale }}" data-auth-locale>
+    <label class="field">
+      {{ ui.text("auth.code") }}
+      <input class="code-input" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" minlength="6" maxlength="6" autocomplete="one-time-code" required autofocus>
+      {{ ui.text("auth.code.help", "small", "field-help") }}
+    </label>
+    <button class="button button--primary button--wide" type="submit">
+      {{ ui.text("auth.verify.action") }}
+      <span aria-hidden="true">→</span>
+    </button>
+  </form>
+  <div class="auth-alternatives">
+    <form
+      method="post"
+      action="{{ url_for('resend_login_code') }}"
+      hx-post="{{ url_for('resend_login_code') }}"
+      hx-target="#auth-panel"
+      hx-swap="outerHTML"
+      hx-disabled-elt="find button"
+    >
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <input type="hidden" name="challenge_id" value="{{ challenge_id }}">
+      <button class="text-button" type="submit">{{ ui.text("auth.resend") }}</button>
+    </form>
+    <a
+      class="text-link"
+      href="{{ url_for('home') }}"
+      hx-get="{{ url_for('email_form') }}"
+      hx-target="#auth-panel"
+      hx-swap="outerHTML"
+    >{{ ui.text("auth.change_email") }}</a>
+  </div>
+</section>

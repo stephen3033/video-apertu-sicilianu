@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui with context %}
+
+{% block body %}
+<div class="app-shell">
+  <header class="app-header" data-persistent-navbar>
+    <a class="brand brand--app" href="{{ url_for('new_submission') }}">
+      {{ ui.mark() }}
+      <span class="brand__words">
+        <strong>Video Apertu</strong>
+        <small>Sicilianu</small>
+      </span>
+    </a>
+
+    <nav class="app-nav" {{ ui.translated_attribute("aria.primary_navigation") }}>
+      <a
+        href="{{ url_for('submission_history') }}"
+        hx-get="{{ url_for('submission_history') }}"
+        hx-target="#app-content"
+        hx-swap="innerHTML show:top"
+        hx-push-url="true"
+        data-nav-section="history"
+      >{{ ui.text("nav.history") }}</a>
+      <a
+        href="{{ url_for('new_submission') }}"
+        hx-get="{{ url_for('new_submission') }}"
+        hx-target="#app-content"
+        hx-swap="innerHTML show:top"
+        hx-push-url="true"
+        data-nav-section="new"
+      >{{ ui.text("nav.new") }}</a>
+    </nav>
+
+    <div class="account-tools">
+      {{ ui.language_selector("app") }}
+      <div class="account-identity">
+        {{ ui.text("nav.account", "span", "sr-only") }}
+        <span class="account-dot" aria-hidden="true"></span>
+        <span class="account-email" title="{{ user.email }}">{{ user.email }}</span>
+      </div>
+      <form method="post" action="{{ url_for('logout') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <button class="text-button" type="submit">{{ ui.text("nav.logout") }}</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="app-content" class="app-content" hx-history-elt tabindex="-1">
+    {% include content_template %}
+  </main>
+</div>
+{% endblock %}

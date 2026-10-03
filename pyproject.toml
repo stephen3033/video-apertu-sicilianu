@@ -1,0 +1,40 @@
+[project]
+name = "video-apertu-sicilianu"
+version = "0.1.0"
+description = "A multilingual HTMX interface for contributing Sicilian audio and video."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiofiles>=24.1.0,<25",
+    "alembic>=1.14,<2",
+    "email-validator>=2.2,<3",
+    "fastapi>=0.115,<1",
+    "itsdangerous>=2.2,<3",
+    "jinja2>=3.1,<4",
+    "pydantic-settings>=2.7,<3",
+    "python-multipart>=0.0.20,<1",
+    "sqlalchemy>=2.0,<3",
+    "uvicorn[standard]>=0.34,<1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28,<1",
+    "pytest>=8.3,<9",
+    "pytest-cov>=6,<7",
+    "pytest-playwright>=0.6,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not e2e'"
+testpaths = ["tests"]
+markers = [
+    "e2e: browser tests that require Chromium and the installed HTMX npm asset",
+]

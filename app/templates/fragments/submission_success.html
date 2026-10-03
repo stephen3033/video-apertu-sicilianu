@@ -1,0 +1,29 @@
+{% import "macros.html" as ui with context %}
+<div id="submission-workspace" class="success-card" role="status" aria-live="polite" tabindex="-1">
+  <div class="success-seal" aria-hidden="true">
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2"/><path d="m19 33 8 8 18-20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  {{ ui.text("success.title", "h2") }}
+  {{ ui.text("success.message", "p", "success-message") }}
+  <dl class="receipt">
+    <div>
+      {{ ui.text("success.title_label", "dt") }}
+      <dd>{{ submission.title }}</dd>
+    </div>
+    <div>
+      {{ ui.text("success.file_label", "dt") }}
+      <dd>{{ submission.original_filename }}</dd>
+    </div>
+  </dl>
+  <a
+    class="button button--primary"
+    href="{{ url_for('new_submission') }}"
+    hx-get="{{ url_for('new_submission') }}"
+    hx-target="#app-content"
+    hx-swap="innerHTML show:top"
+    hx-push-url="true"
+  >
+    {{ ui.text("success.another") }}
+    <span aria-hidden="true">＋</span>
+  </a>
+</div>

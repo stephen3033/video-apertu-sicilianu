@@ -1,0 +1,8 @@
+# Local only. Copy to .dev.vars. Never use these values in a deployed Worker.
+AUTH_CODE_SECRET=development-only-auth-code-secret-do-not-deploy
+EMAIL_BACKEND=console
+R2_ACCESS_KEY_ID=development-only
+R2_SECRET_ACCESS_KEY=development-only
+IA_ACCESS_KEY=development-only
+IA_SECRET_KEY=development-only
+RESEND_API_KEY=development-only
